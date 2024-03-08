@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffff00;
+    background-image: linear-gradient(to right bottom, #f5f7f6bf, #5ca0f2bf);
+    overflow: hidden;
+}
+
+p {
+    position: absolute;
+    top: 1.25%;
+    transform: translateY(-1.25%);
+    width: 100%;
+    color: #ffef00;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Aref Ruqaa Ink', serif;
+    text-shadow: -0.01em -0.01em 0.01em #ca2325;
+    animation: textAnim 2s ease-in-out 0.5s alternate infinite;
+}
+
+@keyframes textAnim {
+    to {
+        transform: translateY(-0.025em) translateX(0.05em);
+        text-shadow: 0 0.01em #ffef00, 0 0.02em #ffef00, 0 0.03em #ffef00, -0.01em 0.01em #ca2325, -0.02em 0.02em #ca2325,
+            -0.03em 0.03em #ca2325, -0.04em 0.04em #ca2325, -0.01em -0.01em 0.03em #ff0000, -0.02em -0.02em 0.03em #ff0000,
+            -0.03em -0.03em 0.03em #ff0000;
+    }
+}
+
+.chakra {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url(./chakra.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.chakra-biggest {
+    height: 75vh;
+    width: 75vh;
+    opacity: 0.25;
+    animation: chakraAnim 5s linear infinite;
+}
+
+.chakra-bigger {
+    height: 68.75vh;
+    width: 68.75vh;
+    opacity: 0.5;
+    animation: chakraAnim 7.5s linear reverse infinite;
+}
+
+.chakra-big {
+    height: 62.5vh;
+    width: 62.5vh;
+    opacity: 0.75;
+    animation: chakraAnim 10s linear infinite;
+}
+
+@keyframes chakraAnim {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.img-lord-ganesh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 62.5vh;
+    width: 62.5vh;
+}
+
+.img-lord-ganesh img {
+    height: 100%;
+    width: 100%;
+}
+
+.img-lord-ganesh img.shadow-soft {
+    position: absolute;
+    left: 0;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+canvas {
+    position: absolute;
+    z-index: -9;
+}
